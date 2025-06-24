@@ -29,28 +29,9 @@ export default function Careers() {
     };
   }, []);
 
-  // New Tally embed script loader
   useEffect(() => {
-    const d = document;
-    const w = 'https://tally.so/widgets/embed.js';
-    const v = function () {
-      if (typeof Tally !== 'undefined') {
-        Tally.loadEmbeds();
-      } else {
-        d.querySelectorAll('iframe[data-tally-src]:not([src])').forEach(function (e) {
-          e.src = e.dataset.tallySrc;
-        });
-      }
-    };
-
-    if (typeof Tally !== 'undefined') {
-      v();
-    } else if (d.querySelector(`script[src="${w}"]`) == null) {
-      const s = d.createElement('script');
-      s.src = w;
-      s.onload = v;
-      s.onerror = v;
-      d.body.appendChild(s);
+    if (typeof window !== 'undefined' && window.Tally) {
+      window.Tally.loadEmbeds();
     }
   }, []);
 
@@ -59,9 +40,10 @@ export default function Careers() {
       <Head>
         <title>Careers – Arctic44</title>
         <meta name="description" content="Join Arctic44. Submit your CV and become part of something bold." />
+        <script src="https://tally.so/widgets/embed.js" defer></script>
       </Head>
 
-      {/* Top Navigation */}
+      {/* Top Navigation Bar */}
       <header
         className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl px-6 py-3 rounded-3xl
         transition-all duration-300 overflow-hidden
@@ -72,6 +54,9 @@ export default function Careers() {
           WebkitBackdropFilter: 'blur(30px) saturate(180%)',
           backdropFilter: 'blur(10px) saturate(180%)',
           background: `radial-gradient(600px at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.1), transparent 80%)`,
+          boxShadow: scrolled
+            ? '0 8px 32px 0 rgba(31, 38, 135, 0.37)'
+            : '0 4px 12px 0 rgba(31, 38, 135, 0.25)',
         }}
       >
         <div className="flex justify-between items-center relative z-10">
@@ -90,13 +75,13 @@ export default function Careers() {
               className="bg-[#ccd6f6] text-black font-semibold py-2 px-4 rounded-xl shadow hover:bg-white transition flex items-center gap-2"
               onClick={vibrateAndroid}
             >
-              Get in Touch
+              Get in Touch <span></span>
             </button>
           </Link>
         </div>
       </header>
 
-      {/* Main Section */}
+      {/* Main Careers Content */}
       <main className="min-h-screen bg-gradient-to-b from-[#1a1a1a] via-[#222] to-[#1a1a1a] text-white pt-40 pb-16">
         <div className="max-w-6xl mx-auto px-6 py-16">
           <motion.h1
@@ -124,36 +109,36 @@ export default function Careers() {
             className="bg-white rounded-xl shadow-2xl overflow-hidden"
           >
             <iframe
-              data-tally-src="https://tally.so/embed/mR1Aev"
+              data-tally-src="https://tally.so/embed/mR1Aev?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
               loading="lazy"
               width="100%"
-              height="1281"
+              height="1300"
               frameBorder="0"
               marginHeight="0"
               marginWidth="0"
               title="Arctic44 - Careers"
-              className="w-full min-h-[1281px]"
+              className="w-full min-h-[1300px]"
             ></iframe>
           </motion.div>
         </div>
       </main>
 
-      {/* Mobile Nav */}
+      {/* Bottom Mobile Navigation */}
       <nav className="fixed bottom-0 left-0 right-0 bg-black/80 backdrop-blur-md border-t border-white/20 text-white flex justify-around items-center py-3 md:hidden z-50">
         <Link href="/" className="flex flex-col items-center text-xs hover:text-[#6699cc] hover:underline transition" onClick={vibrateAndroid}>
-          <span>Home</span>
+          <span></span><span>Home</span>
         </Link>
         <Link href="/services" className="flex flex-col items-center text-xs hover:text-[#6699cc] hover:underline transition" onClick={vibrateAndroid}>
-          <span>Services</span>
+          <span></span><span>Services</span>
         </Link>
         <Link href="/blogs" className="flex flex-col items-center text-xs hover:text-[#6699cc] hover:underline transition" onClick={vibrateAndroid}>
-          <span>Blogs</span>
+          <span></span><span>Blogs</span>
         </Link>
         <Link href="/contact" className="flex flex-col items-center text-xs hover:text-[#6699cc] hover:underline transition" onClick={vibrateAndroid}>
-          <span>Contact</span>
+          <span></span><span>Contact</span>
         </Link>
         <Link href="/careers" className="flex flex-col items-center text-xs hover:text-[#6699cc] hover:underline transition" onClick={vibrateAndroid}>
-          <span>Careers</span>
+          <span></span><span>Careers</span>
         </Link>
       </nav>
     </>
