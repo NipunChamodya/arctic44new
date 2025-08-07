@@ -10,7 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "framer-motion": "^12.19.1",
+    "framer-motion": "^12.23.12",
     "gh-pages": "^6.3.0",
     "googleapis": "^150.0.1",
     "multer": "^2.0.1",
