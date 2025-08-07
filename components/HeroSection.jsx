@@ -78,7 +78,7 @@ export default function HeroSection() {
             <Link href="#" className="text-gray-300 hover:text-white hover:border-b-2 hover:border-white transition">Home</Link>
             <Link href="#services" className="text-gray-300 hover:text-white hover:border-b-2 hover:border-white transition">Services</Link>
             <Link href="#blogs" className="text-gray-300 hover:text-white hover:border-b-2 hover:border-white transition">Blogs</Link>
-            <Link href="/about" className="text-gray-300 hover:text-white hover:border-b-2 hover:border-white transition">About Us</Link>
+            <Link href="#about" className="text-gray-300 hover:text-white hover:border-b-2 hover:border-white transition">About Us</Link>
             <Link href="/careers" className="text-gray-300 hover:text-white hover:border-b-2 hover:border-white transition">Careers</Link>
           </nav>
 

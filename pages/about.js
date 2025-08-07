@@ -102,7 +102,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About Us – Arctic44 | Elevating Your Vision, Empowering Your Success</title>
+        <title>About Us – Arctic44</title>
         <meta name="description" content="Arctic44 is a forward-thinking digital agency specializing in innovative solutions. Founded in 2025, we transform businesses with cutting-edge technology and creative excellence." />
       </Head>
 
