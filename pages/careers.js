@@ -110,7 +110,7 @@ export default function Careers() {
               Careers
             </Link>
           </nav>
-          <Link href="/contact">
+          <Link href="/#contact">
             <button
               className="bg-[#ccd6f6] text-black font-semibold py-2 px-4 rounded-xl shadow hover:bg-white transition flex items-center gap-2"
               onClick={vibrateAndroid}
