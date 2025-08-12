@@ -88,8 +88,11 @@ export default function ServicesSection() {
               transition={{ type: 'spring', stiffness: 300, damping: 15 }}
               className="mt-6 bg-[#ccd6f6] text-black font-semibold py-2 px-4 rounded-lg hover:bg-white transition"
               onClick={() => {
-                if (typeof window !== 'undefined' && 'vibrate' in navigator) {
-                  navigator.vibrate(10); // Haptic feedback for mobile
+                if (typeof window !== "undefined" && "vibrate" in navigator) {
+                  navigator.vibrate(10);
+                }
+                if (typeof window !== "undefined") {
+                  window.location.assign("/services");
                 }
               }}
             >
