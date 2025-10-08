@@ -79,13 +79,38 @@ export default function Careers() {
             <Image src="/logonavbar.png" alt="Arctic44 Logo" width={100} height={40} />
           </div>
           <nav className="hidden md:flex space-x-6 text-sm">
-            <Link href="/" className="text-gray-300 hover:text-white hover:border-b-2 hover:border-white transition">Home</Link>
-            <Link href="/services" className="text-gray-300 hover:text-white hover:border-b-2 hover:border-white transition">Services</Link>
-            <Link href="/blogs" className="text-gray-300 hover:text-white hover:border-b-2 hover:border-white transition">Blogs</Link>
-            <Link href="#about" className="text-gray-300 hover:text-white hover:border-b-2 hover:border-white transition">About Us</Link>
-            <Link href="/careers" className="text-gray-300 hover:text-white hover:border-b-2 hover:border-white transition">Careers</Link>
+            <Link
+              href="/"
+              className="text-gray-300 hover:text-white hover:border-b-2 hover:border-white transition"
+            >
+              Home
+            </Link>
+            <Link
+              href="/services"
+              className="text-gray-300 hover:text-white hover:border-b-2 hover:border-white transition"
+            >
+              Services
+            </Link>
+            <Link
+              href="/blog"
+              className="text-gray-300 hover:text-white hover:border-b-2 hover:border-white transition"
+            >
+              Blogs
+            </Link>
+            <Link
+              href="/about"
+              className="text-gray-300 hover:text-white hover:border-b-2 hover:border-white transition"
+            >
+              About Us
+            </Link>
+            <Link
+              href="/careers"
+              className="text-gray-300 hover:text-white hover:border-b-2 hover:border-white transition"
+            >
+              Careers
+            </Link>
           </nav>
-          <Link href="/contact">
+          <Link href="/#contact">
             <button
               className="bg-[#ccd6f6] text-black font-semibold py-2 px-4 rounded-xl shadow hover:bg-white transition flex items-center gap-2"
               onClick={vibrateAndroid}
@@ -140,19 +165,39 @@ export default function Careers() {
 
       {/* Mobile Nav */}
       <nav className="fixed bottom-0 left-0 right-0 bg-black/80 backdrop-blur-md border-t border-white/20 text-white flex justify-around items-center py-3 md:hidden z-50">
-        <Link href="/" className="flex flex-col items-center text-xs hover:text-[#6699cc] hover:underline transition" onClick={vibrateAndroid}>
+        <Link
+          href="/"
+          className="flex flex-col items-center text-xs hover:text-[#6699cc] hover:underline transition"
+          onClick={vibrateAndroid}
+        >
           <span>Home</span>
         </Link>
-        <Link href="/services" className="flex flex-col items-center text-xs hover:text-[#6699cc] hover:underline transition" onClick={vibrateAndroid}>
+        <Link
+          href="/services"
+          className="flex flex-col items-center text-xs hover:text-[#6699cc] hover:underline transition"
+          onClick={vibrateAndroid}
+        >
           <span>Services</span>
         </Link>
-        <Link href="/blogs" className="flex flex-col items-center text-xs hover:text-[#6699cc] hover:underline transition" onClick={vibrateAndroid}>
+        <Link
+          href="/blog"
+          className="flex flex-col items-center text-xs hover:text-[#6699cc] hover:underline transition"
+          onClick={vibrateAndroid}
+        >
           <span>Blogs</span>
         </Link>
-        <Link href="/contact" className="flex flex-col items-center text-xs hover:text-[#6699cc] hover:underline transition" onClick={vibrateAndroid}>
+        <Link
+          href="/contact"
+          className="flex flex-col items-center text-xs hover:text-[#6699cc] hover:underline transition"
+          onClick={vibrateAndroid}
+        >
           <span>Contact</span>
         </Link>
-        <Link href="/careers" className="flex flex-col items-center text-xs hover:text-[#6699cc] hover:underline transition" onClick={vibrateAndroid}>
+        <Link
+          href="/careers"
+          className="flex flex-col items-center text-xs hover:text-[#6699cc] hover:underline transition"
+          onClick={vibrateAndroid}
+        >
           <span>Careers</span>
         </Link>
       </nav>

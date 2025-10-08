@@ -2,6 +2,7 @@
 
 import styles from './Footer.module.css';
 import { FaEnvelope } from 'react-icons/fa';
+import { useRouter } from 'next/router';
 
 export default function Footer() {
   const triggerVibration = () => {
@@ -9,6 +10,8 @@ export default function Footer() {
       navigator.vibrate([20]); // simple haptic tap
     }
   };
+
+  const router = useRouter();
 
   return (
     <footer className={styles.footer}>
@@ -25,10 +28,30 @@ export default function Footer() {
 
         <div className={styles.footerColumn}>
           <h3>LINKS</h3>
-          <p><a href="#home" onClick={triggerVibration}> Home</a></p>
-          <p><a href="#service" onClick={triggerVibration}> Service</a></p>
-          <p><a href="#blogs" onClick={triggerVibration}> Blogs</a></p>
-          <p><a href="#about" onClick={triggerVibration}> About Us</a></p>
+          <p>
+            <a href="/" onClick={triggerVibration}>
+              {" "}
+              Home
+            </a>
+          </p>
+          <p>
+            <a href={router.pathname === "/" ? "/#services" : "/services"} onClick={triggerVibration}>
+              {" "}
+              Services
+            </a>
+          </p>
+          <p>
+            <a href="/blog" onClick={triggerVibration}>
+              {" "}
+              Blogs
+            </a>
+          </p>
+          <p>
+            <a href="/about" onClick={triggerVibration}>
+              {" "}
+              About Us
+            </a>
+          </p>
         </div>
 
         <div className={styles.footerColumn}>
