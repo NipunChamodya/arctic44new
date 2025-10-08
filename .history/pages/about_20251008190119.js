@@ -61,32 +61,32 @@ export default function About() {
     {
       title: "Expert Team",
       description: "Our team comprises seasoned professionals with 5+ years of experience in cutting-edge technologies.",
-      icon: ""
+      icon: "🏆"
     },
     {
       title: "Innovation-Driven",
       description: "We leverage the latest technologies including AI, cloud solutions, and modern frameworks to deliver exceptional results.",
-      icon: ""
+      icon: "🚀"
     },
     {
       title: "Quality Guarantee",
       description: "We maintain the highest standards in every project, ensuring robust, scalable, and future-proof solutions.",
-      icon: ""
+      icon: "✨"
     },
     {
       title: "Client-Centric",
       description: "Your success is our priority. We listen, understand, and tailor solutions that align with your business goals.",
-      icon: ""
+      icon: "🎯"
     },
     {
       title: "Results-Driven",
       description: "We don't just build software; we deliver measurable results that drive your business forward.",
-      icon: ""
+      icon: "📈"
     },
     {
       title: "End-to-End Support",
       description: "From concept to deployment and beyond, we provide comprehensive support throughout your digital journey.",
-      icon: ""
+      icon: "🛡️"
     }
   ];
 
@@ -343,18 +343,18 @@ export default function About() {
                   <div className="text-3xl font-bold text-[#6699cc]">100%</div>
                   <div className="text-gray-300">Client Satisfaction</div>
                 </div>
-                {/* <div className="bg-white/5 rounded-lg p-4">
+                <div className="bg-white/5 rounded-lg p-4">
                   <div className="text-3xl font-bold text-[#6699cc]">50+</div>
                   <div className="text-gray-300">Projects Delivered</div>
-                </div> */}
+                </div>
                 <div className="bg-white/5 rounded-lg p-4">
                   <div className="text-3xl font-bold text-[#6699cc]">24/7</div>
                   <div className="text-gray-300">Support</div>
                 </div>
-                {/* <div className="bg-white/5 rounded-lg p-4">
-                  <div className="text-3xl font-bold text-[#6699cc]">1+</div>
+                <div className="bg-white/5 rounded-lg p-4">
+                  <div className="text-3xl font-bold text-[#6699cc]">5+</div>
                   <div className="text-gray-300">Years Experience</div>
-                </div> */}
+                </div>
               </div>
             </div>
           </motion.div>

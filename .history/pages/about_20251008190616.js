@@ -343,18 +343,15 @@ export default function About() {
                   <div className="text-3xl font-bold text-[#6699cc]">100%</div>
                   <div className="text-gray-300">Client Satisfaction</div>
                 </div>
-                {/* <div className="bg-white/5 rounded-lg p-4">
-                  <div className="text-3xl font-bold text-[#6699cc]">50+</div>
-                  <div className="text-gray-300">Projects Delivered</div>
-                </div> */}
+                
                 <div className="bg-white/5 rounded-lg p-4">
                   <div className="text-3xl font-bold text-[#6699cc]">24/7</div>
                   <div className="text-gray-300">Support</div>
                 </div>
-                {/* <div className="bg-white/5 rounded-lg p-4">
+                <div className="bg-white/5 rounded-lg p-4">
                   <div className="text-3xl font-bold text-[#6699cc]">1+</div>
                   <div className="text-gray-300">Years Experience</div>
-                </div> */}
+                </div>
               </div>
             </div>
           </motion.div>
