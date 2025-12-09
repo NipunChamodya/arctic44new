@@ -1,4 +1,5 @@
-// pages/index.js
+"use client";
+
 import Head from 'next/head';
 import HeroSection from '../components/HeroSection';
 import ServicesSection from '../components/ServicesSection';
@@ -8,7 +9,10 @@ import MeetProfessionals from '../components/MeetProfessionals';
 import Footer from '../components/Footer';
 import ContactSection from '../components/ContactSection';
 
+// Import your countdown banner
+import CountdownBanner from '../components/CountdownBanner';
 
+import PopupCard from '../components/PopupCard';
 
 export default function Home() {
   return (
@@ -18,7 +22,10 @@ export default function Home() {
         <meta name="description" content="Arctic44 Official Website" />
       </Head>
 
-      {/* You had an extra </div> here, removed it */}
+      {/* Client-only components */}
+      <PopupCard />
+      <CountdownBanner />
+
       <div className="relative z-10">
         <HeroSection />
         <main>
